@@ -63,7 +63,7 @@ def get_scripts():  # {name: path, ...}
 
 
 def list_scripts():
-    return get_scripts().keys()
+    return list(get_scripts().keys())
 
 
 def get_commands():  # {name: cmd, ...}
@@ -73,7 +73,7 @@ def get_commands():  # {name: cmd, ...}
 
 
 def list_commands():
-    return get_commands().keys()
+    return list(get_commands().keys())
 
 
 def run_script(script_name):
