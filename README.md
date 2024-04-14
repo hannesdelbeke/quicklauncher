@@ -8,10 +8,8 @@ Quicklauncher relies on PySide/PySide2/PySide6 and works on Autodesk Maya 2014 o
 
 
 ## Installation
-
-There are many ways to go about this, but for casual users I would recommend to get the
-[latest release](https://github.com/csaez/quicklauncher/releases) and simply copy
-`quicklauncher.py` to your maya script directory.
+1. get the [latest release](https://github.com/csaez/quicklauncher/releases) 
+2. copy `quicklauncher.py` to your maya script directory. e.g. `%UserProfile%\Documents\maya\2026\scripts`
 
 ## Usage
 
