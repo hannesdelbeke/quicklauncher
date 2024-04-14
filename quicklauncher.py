@@ -28,10 +28,13 @@ from maya import cmds, mel
 
 # qt bindings
 try:
-    from PySide2 import QtCore, QtGui, QtWidgets
+    from PySide6 import QtCore, QtGui, QtWidgets
 except ImportError:
-    from PySide import QtCore, QtGui
-    QtWidgets = QtGui
+    try:
+        from PySide2 import QtCore, QtGui, QtWidgets
+    except ImportError:
+        from PySide import QtCore, QtGui
+        QtWidgets = QtGui
 
 
 __all__ = ['show', 'get_main_window', 'get_repo', 'set_repo', 'list_scripts',
@@ -139,6 +142,8 @@ class QuickLauncherMenu(QtWidgets.QMenu):
         self.lineEdit.setCompleter(completer)
         # connect signals
         self.lineEdit.returnPressed.connect(self.accept)
+        self.setMinimumWidth(300)
+
 
     def accept(self):
         text = self.lineEdit.text()
