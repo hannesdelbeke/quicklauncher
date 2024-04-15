@@ -1,27 +1,15 @@
 QuickLauncher
 =============
 
-A minimal Qt based menu to quickly find and execute Maya commands and user scripts.
+A minimal Qt based menu to quickly find and execute Maya commands and user scripts.  
+Quicklauncher relies on PySide/PySide2/PySide6 and works on Autodesk Maya 2014 or greater. (last tested on Maya 2025)
 
 ![quicklauncher](https://cloud.githubusercontent.com/assets/2292742/20506707/8b19023c-b034-11e6-8598-a480924f8740.gif)
 
 
-> `quicklauncher` relies on PySide/PySide2 and should work out of the box on Autodesk Maya 2014 or greater.
-
-
 ## Installation
-
-There are many ways to go about this, but for casual users I would recommend to get the
-[latest release](https://github.com/csaez/quicklauncher/releases) and simply copy
-`quicklauncher.py` to your maya script directory.
-
-If you are a developer or want to integrate quicklauncher in your pipeline, I highly recommend
-the standard `setup.py` script as it brings more flexibility.
-
-```python
-python setup.py install
-```
-
+1. get the [latest release](https://github.com/csaez/quicklauncher/releases) 
+2. copy `quicklauncher.py` to your maya script directory. e.g. `%UserProfile%\Documents\maya\2026\scripts` on windows
 
 ## Usage
 
@@ -37,9 +25,32 @@ import quicklauncher
 quicklauncher.select_repo()
 ```
 
-For more info, check the [Wiki][] (there are a few interesting things you can do).
 
-[Wiki]: https://github.com/csaez/quicklauncher/wiki
+
+## Examples of advanced usage
+
+import quicklauncher as ql
+
+``` python
+# show menu
+ql.show()
+
+# repository dialog
+ql.select_repo()
+
+# ... or go deeper using the API
+ql.get_repo()
+ql.set_repo(repository_path)
+
+ql.get_scripts()  # {script_name: script_fullpath, ...}
+ql.list_scripts() # [script_name, ...]
+ql.run_script(script_name)
+
+ql.get_commands()  # {cmd_name: cmd_object, ...}
+ql.list_commands() # [cmd_name, ...]
+ql.run_cmd(cmd_name)
+```
+
 
 > **TIP:** You can refresh the list of available scripts without restarting Maya by simply
 > reloading the python module in the script editor (or add a little python script that does
