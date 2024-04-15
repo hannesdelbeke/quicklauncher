@@ -27,7 +27,7 @@ quicklauncher.select_repo()
 
 
 
-## advanced
+## Examples of advanced usage
 
 import quicklauncher as ql
 
