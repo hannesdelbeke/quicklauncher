@@ -1,3 +1,7 @@
+**update**: Maya now has this build in with CTRL+F [[Maya search]]  
+but custom commands won't show up in there unless you make a Maya runTimeCommand  
+This repo can be archived now  
+
 QuickLauncher
 =============
 
