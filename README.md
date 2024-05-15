@@ -1,4 +1,4 @@
-**update**: Maya now has this build in with CTRL+F [[Maya search]]  
+**update**: Maya now has this build in with CTRL+F [Maya search](https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-A41539AD-F566-4F3D-8671-FE6237BB3C2B)  
 but custom commands won't show up in there unless you make a Maya runTimeCommand  
 This repo can be archived now  
 
